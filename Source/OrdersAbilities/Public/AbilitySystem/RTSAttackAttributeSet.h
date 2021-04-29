@@ -32,7 +32,7 @@ public:
 	ATTRIBUTE_ACCESSORS(URTSAttackAttributeSet, AttackDamageLow)
 
 	UFUNCTION()
-	void OnRep_AttackDamageLow() { GAMEPLAYATTRIBUTE_REPNOTIFY(URTSAttackAttributeSet, AttackDamageLow); }
+	void OnRep_AttackDamageLow() { GAMEPLAYATTRIBUTE_REPNOTIFY(URTSAttackAttributeSet, AttackDamageLow, AttackDamageLow); }
 
     /** AttackDamageHigh Attribute */
     UPROPERTY(BlueprintReadOnly, Category = "Attributes|Attack", ReplicatedUsing = OnRep_AttackDamageHigh)
@@ -40,7 +40,7 @@ public:
     ATTRIBUTE_ACCESSORS(URTSAttackAttributeSet, AttackDamageHigh)
 
     UFUNCTION()
-    void OnRep_AttackDamageHigh() { GAMEPLAYATTRIBUTE_REPNOTIFY(URTSAttackAttributeSet, AttackDamageHigh); }
+    void OnRep_AttackDamageHigh() { GAMEPLAYATTRIBUTE_REPNOTIFY(URTSAttackAttributeSet, AttackDamageHigh, AttackDamageHigh); }
 
     /** Time before the attack can be used again, in seconds. */
     UPROPERTY(BlueprintReadOnly, Category = "Attributes|Attack", ReplicatedUsing = OnRep_AttackRate)
@@ -48,7 +48,7 @@ public:
     ATTRIBUTE_ACCESSORS(URTSAttackAttributeSet, AttackRate)
 
 	UFUNCTION()
-	void OnRep_AttackRate() { GAMEPLAYATTRIBUTE_REPNOTIFY(URTSAttackAttributeSet, AttackRate); }
+	void OnRep_AttackRate() { GAMEPLAYATTRIBUTE_REPNOTIFY(URTSAttackAttributeSet, AttackRate, AttackRate); }
 
     /** Range Attribute */
     UPROPERTY(BlueprintReadOnly, Category = "Attributes|Attack", ReplicatedUsing = OnRep_Range)
@@ -56,7 +56,7 @@ public:
     ATTRIBUTE_ACCESSORS(URTSAttackAttributeSet, Range)
 
     UFUNCTION()
-    void OnRep_Range() { GAMEPLAYATTRIBUTE_REPNOTIFY(URTSAttackAttributeSet, Range); }
+    void OnRep_Range() { GAMEPLAYATTRIBUTE_REPNOTIFY(URTSAttackAttributeSet, Range, Range); }
 
     /** CooldownReduction Attribute */
     UPROPERTY(BlueprintReadOnly, Category = "Attributes|Attack", ReplicatedUsing = OnRep_CooldownReduction)
@@ -64,7 +64,7 @@ public:
     ATTRIBUTE_ACCESSORS(URTSAttackAttributeSet, CooldownReduction)
 
     UFUNCTION()
-    void OnRep_CooldownReduction() { GAMEPLAYATTRIBUTE_REPNOTIFY(URTSAttackAttributeSet, CooldownReduction); }
+    void OnRep_CooldownReduction() { GAMEPLAYATTRIBUTE_REPNOTIFY(URTSAttackAttributeSet, CooldownReduction, CooldownReduction); }
 
     /**
      * The OutgoingDamageMultiplier of a target is multiplied with incoming damage to modify the loss of hit points of
@@ -75,10 +75,10 @@ public:
     ATTRIBUTE_ACCESSORS(URTSAttackAttributeSet, OutgoingDamageMultiplier)
 
     UFUNCTION()
-    void OnRep_OutgoingDamageMultiplier() { GAMEPLAYATTRIBUTE_REPNOTIFY(URTSAttackAttributeSet, OutgoingDamageMultiplier); }
+    void OnRep_OutgoingDamageMultiplier() { GAMEPLAYATTRIBUTE_REPNOTIFY(URTSAttackAttributeSet, OutgoingDamageMultiplier, OutgoingDamageMultiplier); }
 
     //~ Begin UAttributeSet Interface
-    virtual bool ShouldInitProperty(bool FirstInit, UProperty* PropertyToInit) const override;
+    virtual bool ShouldInitProperty(bool FirstInit, FProperty* PropertyToInit) const override;
     virtual void PreAttributeBaseChange(const FGameplayAttribute& Attribute, float& NewValue) const override;
     //~ End UAttributeSet Interface
 

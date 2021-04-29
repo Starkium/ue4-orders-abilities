@@ -149,7 +149,7 @@ bool URTSUtilities::IsAIUnit(AActor* Actor)
         return false;
     }
 
-    return OwnerComponent->GetPlayerOwner() && OwnerComponent->GetPlayerOwner()->bIsABot;
+    return OwnerComponent->GetPlayerOwner() && OwnerComponent->GetPlayerOwner()->IsABot();
 }
 
 // bool URTSUtilities::IsReadyToUse(AActor* Actor)

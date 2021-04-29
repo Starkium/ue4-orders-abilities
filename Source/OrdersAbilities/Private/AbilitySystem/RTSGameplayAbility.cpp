@@ -272,7 +272,8 @@ bool URTSGameplayAbility::CommitAbilityCooldown(
 	const FGameplayAbilitySpecHandle Handle,
 	const FGameplayAbilityActorInfo* ActorInfo,
 	const FGameplayAbilityActivationInfo ActivationInfo,
-	const bool ForceCooldown)
+	const bool ForceCooldown,
+	OUT FGameplayTagContainer* OptionalRelevantTags)
 {
 	if (UAbilitySystemGlobals::Get().ShouldIgnoreCooldowns())
 	{

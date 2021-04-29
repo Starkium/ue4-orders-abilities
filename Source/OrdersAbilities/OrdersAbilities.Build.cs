@@ -28,5 +28,15 @@ public class OrdersAbilities : ModuleRules
                 "RenderCore",
                 "Landscape"
             });
-	}
+       /* PrivateDependencyModuleNames.AddRange(
+            new string[]
+            {
+                
+                "GameplayAbilities",
+                "GameplayTags",
+                "GameplayTasks",
+
+            });
+       */
+    }
 }

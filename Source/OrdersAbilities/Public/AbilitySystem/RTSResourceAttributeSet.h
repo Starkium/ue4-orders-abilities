@@ -22,7 +22,7 @@ public:
 	ATTRIBUTE_ACCESSORS(URTSResourceAttributeSet, Mana)
 
 	UFUNCTION()
-	void OnRep_Mana() { GAMEPLAYATTRIBUTE_REPNOTIFY(URTSResourceAttributeSet, Mana); }
+	void OnRep_Mana() { GAMEPLAYATTRIBUTE_REPNOTIFY(URTSResourceAttributeSet, Mana, Mana); }
 
 	ATTRIBUTE_MAXVALUE_CHANGED(URTSResourceAttributeSet, Mana)
 
@@ -32,7 +32,7 @@ public:
 	ATTRIBUTE_ACCESSORS(URTSResourceAttributeSet, MaxMana)
 
 	UFUNCTION()
-	void OnRep_MaxMana() { GAMEPLAYATTRIBUTE_REPNOTIFY(URTSResourceAttributeSet, MaxMana); }
+	void OnRep_MaxMana() { GAMEPLAYATTRIBUTE_REPNOTIFY(URTSResourceAttributeSet, MaxMana, MaxMana); }
 	
 	/** ManaRegen Attribute */
 	UPROPERTY(BlueprintReadOnly, Category = "Attributes|Resource", ReplicatedUsing = OnRep_ManaRegen)
@@ -40,7 +40,7 @@ public:
 	ATTRIBUTE_ACCESSORS(URTSResourceAttributeSet, ManaRegen)
 	
 	UFUNCTION()
-	void OnRep_ManaRegen() { GAMEPLAYATTRIBUTE_REPNOTIFY(URTSResourceAttributeSet, ManaRegen); }
+	void OnRep_ManaRegen() { GAMEPLAYATTRIBUTE_REPNOTIFY(URTSResourceAttributeSet, ManaRegen, ManaRegen); }
 
 	/** CostReduction Attribute */
 	UPROPERTY(BlueprintReadOnly, Category = "Attributes|Resource", ReplicatedUsing = OnRep_CostReduction)
@@ -48,7 +48,7 @@ public:
 	ATTRIBUTE_ACCESSORS(URTSResourceAttributeSet, CostReduction)
 
 	UFUNCTION()
-	void OnRep_CostReduction() { GAMEPLAYATTRIBUTE_REPNOTIFY(URTSResourceAttributeSet, CostReduction); }
+	void OnRep_CostReduction() { GAMEPLAYATTRIBUTE_REPNOTIFY(URTSResourceAttributeSet, CostReduction, CostReduction); }
 
 
     //~ Begin UAttributeSet Interface

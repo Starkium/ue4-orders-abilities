@@ -490,7 +490,7 @@ void URTSAbilitySystemComponent::InitializeAttributes(int AttributeLevel, bool b
 		}
 	}
 
-    for (UAttributeSet* AttributeSet : SpawnedAttributes)
+    for (UAttributeSet* AttributeSet : GetSpawnedAttributes())
     {
         URTSAttributeSet* RTSAttributeSet = Cast<URTSAttributeSet>(AttributeSet);
         if (RTSAttributeSet != nullptr)
@@ -547,7 +547,7 @@ void URTSAbilitySystemComponent::InitializeAttributes(int AttributeLevel, bool b
 	// //
 	// AttributeInitter->InitAttributeSetDefaults(this, GroupName, AttributeLevel, bInitialInit);
  
-    for (UAttributeSet* AttributeSet : SpawnedAttributes)
+    for (UAttributeSet* AttributeSet : GetSpawnedAttributes())
     {
         URTSAttributeSet* RTSAttributeSet = Cast<URTSAttributeSet>(AttributeSet);
         if (RTSAttributeSet != nullptr)

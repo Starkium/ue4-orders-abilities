@@ -214,7 +214,7 @@ bool ARTSPlayerController::DoesControllerOwnActor(AActor* Actor)
 		return false;
 	}
 
-	return ActorOwner->PlayerId == GetPlayerState()->PlayerId;
+	return ActorOwner->GetPlayerId() == GetPlayerState()->GetPlayerId();
 }
 
 void ARTSPlayerController::BeginPlay()

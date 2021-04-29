@@ -59,7 +59,7 @@ void URTSSelectableComponent::BeginPlay()
         UE_LOG(LogRTS, Warning, TEXT("%s has no UCapsuleComponent and won't show selection circles."), *Owner->GetName());
     }
 
-	auto Meshes = GetOwner()->GetComponentsByClass(UMeshComponent::StaticClass());
+	auto Meshes = GetOwner()->GetComponents(); //Need to double check implimentation 4/29/2021
 	for (UActorComponent* Mesh : Meshes)
 	{
 		if (UMeshComponent* MeshComponent = Cast<UMeshComponent>(Mesh))
